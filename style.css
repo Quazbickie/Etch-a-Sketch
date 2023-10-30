@@ -5,6 +5,7 @@
     height: 100px;
     font-family: 'Pacifico', cursive;
     font-size: 64px;
+    padding-top: 48px;
 }
 
 .game {
@@ -36,6 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 100px;
 }
 
 button {
