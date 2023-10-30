@@ -1,0 +1,26 @@
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.grid-container {
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 496px;
+    height: 496px;
+    border: 0.8px dashed red;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid-square {
+    
+}
