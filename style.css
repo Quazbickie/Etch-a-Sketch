@@ -30,6 +30,16 @@
     justify-content: center;
 }
 
-.grid-square {
-    
+
+.options {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 15px 32px;
+    border: none;
+    border-radius: 12px;
 }
