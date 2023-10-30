@@ -32,11 +32,14 @@ function createGrid(gridSize) {
         let target = event.target;
         let square = document.getElementById(`${target.id}`);
 
-        if(rainbowToggle == 1){
-            square.style.backgroundColor = `rgb(${getRandomColour()})`;
-        } else {
-            square.style.backgroundColor = "black";
+        if(square.getAttribute("toggled") == "false"){
+            if(rainbowToggle == 1){
+                square.style.backgroundColor = `rgb(${getRandomColour()})`;
+            } else {
+                square.style.backgroundColor = "black";
+            }
         }
+        
         square.setAttribute("toggled","true");
     })
 
@@ -48,6 +51,7 @@ resetBtn.addEventListener('click', (event) => {
 
     for(let i = 0; i < gridChildren.length; i++){
         gridChildren[i].style.backgroundColor = "white";
+        gridChildren[i].setAttribute("toggled","false");
     }
 })
 

@@ -8,6 +8,7 @@
 }
 
 .game {
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -18,8 +19,8 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 496px;
-    height: 496px;
+    width: 500px;
+    height: 500px;
 }
 
 .grid {
