@@ -30,7 +30,7 @@ function createGrid(gridSize = DEFAULT_GRID_SIZE) {
     for(let i = 0; i < totalSquares; i++){
         let newSquare = document.createElement("div");
         newSquare.setAttribute("class","grid-square");
-        newSquare.setAttribute("style","border:0.001px solid black");
+        // newSquare.setAttribute("style","border:0.001px solid black");
         newSquare.setAttribute("toggled","false");
         grid.appendChild(newSquare);
     }
