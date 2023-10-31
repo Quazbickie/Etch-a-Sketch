@@ -25,8 +25,6 @@ function createGrid(gridSize = DEFAULT_GRID_SIZE) {
     let totalSquares = gridSize * gridSize;
     let squareWH = GRID_WIDTH / gridSize;
 
-
-
     for(let i = 0; i < totalSquares; i++){
         let newSquare = document.createElement("div");
         newSquare.setAttribute("class","grid-square");
@@ -84,7 +82,7 @@ resizeBtn.addEventListener('click', (event) => {
     event.preventDefault();
     let resizeInput = document.querySelector('.number-field');
     let gridSize = Number(resizeInput.value);
-    if(gridSize < 8){
+    if(gridSize < 1){
         gridSize = DEFAULT_GRID_SIZE;
     }
     createGrid(gridSize);
