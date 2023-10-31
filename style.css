@@ -16,27 +16,17 @@
 }
 
 .grid-container {
-    text-align: center;
     display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 515px;
-    height: 515px;
-}
-
-.grid {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    width: 550px;
+    height: 550px;
 }
-
 
 .options {
     margin-top: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     gap: 100px;
 }
 
@@ -44,4 +34,10 @@ button {
     padding: 15px 32px;
     border: none;
     border-radius: 12px;
+}
+
+.grid-form  {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
