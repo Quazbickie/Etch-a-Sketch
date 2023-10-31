@@ -10,12 +10,12 @@ let rainbowBtn = document.querySelector('.rainbow');
 let resizeBtn = document.querySelector('.resize');
 let rainbowToggle = 0;
 let gridContainer = document.querySelector('.grid-container');
-const GRID_WIDTH = gridContainer.clientWidth;
+const GRID_WIDTH = gridContainer.offsetWidth;
 const DEFAULT_GRID_SIZE = 16;
 createGrid(DEFAULT_GRID_SIZE);
 
 
-function createGrid(gridSize) {
+function createGrid(gridSize = DEFAULT_GRID_SIZE) {
     let grid = document.querySelector('.grid-container');
     
     while(grid.firstChild){
@@ -24,6 +24,7 @@ function createGrid(gridSize) {
 
     let totalSquares = gridSize * gridSize;
     let squareWH = (GRID_WIDTH-gridSize) / gridSize;
+
 
 
     for(let i = 0; i < totalSquares; i++){
@@ -62,13 +63,6 @@ resetBtn.addEventListener('click', (event) => {
     let resizeInput = document.querySelector('.number-field');
     let gridSize = Number(resizeInput.value);
     createGrid(gridSize);
-    let grid = document.querySelector('.grid');
-    let gridChildren = grid.children;
-
-    for(let i = 0; i < gridChildren.length; i++){
-        gridChildren[i].style.backgroundColor = "white";
-        gridChildren[i].setAttribute("toggled","false");
-    }
 })
 
 rainbowBtn.addEventListener('click', (event) => {
@@ -83,6 +77,9 @@ resizeBtn.addEventListener('click', (event) => {
     event.preventDefault();
     let resizeInput = document.querySelector('.number-field');
     let gridSize = Number(resizeInput.value);
+    if(gridSize < 8){
+        gridSize = DEFAULT_GRID_SIZE;
+    }
     createGrid(gridSize);
 })
 

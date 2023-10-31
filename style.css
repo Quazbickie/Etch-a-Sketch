@@ -66,12 +66,13 @@ table {
 .grid-container {
     display:flex;
     flex-wrap: wrap;
+    /* align-content: flex-start; */
     width: 550px;
     height: 550px;
+    margin-bottom: 100px;
 }
 
 .options {
-    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
