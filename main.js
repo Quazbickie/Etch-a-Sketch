@@ -39,7 +39,7 @@ function createGrid(gridSize = DEFAULT_GRID_SIZE) {
     for(let i = 0; i < gridChildren.length; i++){
         gridChildren[i].style.width = `${squareWH}px`;
         gridChildren[i].style.height = `${squareWH}px`;
-        gridChildren[i].style.backgroundColor = "beige";
+        gridChildren[i].style.backgroundColor = "lightgrey";
         gridChildren[i].id = i;
     }
 
