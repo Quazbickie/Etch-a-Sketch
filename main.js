@@ -23,14 +23,14 @@ function createGrid(gridSize = DEFAULT_GRID_SIZE) {
     }
 
     let totalSquares = gridSize * gridSize;
-    let squareWH = (GRID_WIDTH-gridSize) / gridSize;
+    let squareWH = GRID_WIDTH / gridSize;
 
 
 
     for(let i = 0; i < totalSquares; i++){
         let newSquare = document.createElement("div");
         newSquare.setAttribute("class","grid-square");
-        // newSquare.setAttribute("style","border:0.001px solid black");
+        newSquare.setAttribute("style", "box-shadow:inset 0 0 1px white");
         newSquare.setAttribute("toggled","false");
         grid.appendChild(newSquare);
     }
@@ -71,8 +71,12 @@ resetBtn.addEventListener('click', (event) => {
 rainbowBtn.addEventListener('click', (event) => {
     if(rainbowToggle == 0){
         rainbowToggle = 1;
+        rainbowBtn.style.backgroundImage = "linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet";
+        rainbowBtn.style.backgroundImage.opacity = '0.3';
     } else {
         rainbowToggle = 0;
+        rainbowBtn.style.backgroundImage = "";
+        rainbowBtn.style.backgroundColor = "lightgrey";
     }
 })
 
