@@ -62,6 +62,9 @@ function createGrid(gridSize = DEFAULT_GRID_SIZE) {
 resetBtn.addEventListener('click', (event) => {
     let resizeInput = document.querySelector('.number-field');
     let gridSize = Number(resizeInput.value);
+    if(gridSize < 8){
+        gridSize = DEFAULT_GRID_SIZE;
+    }
     createGrid(gridSize);
 })
 
